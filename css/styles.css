@@ -1,1 +1,48 @@
 /* Ini css*/ 
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-icon {
+    border: 1px solid;
+    height: 50px;
+    background-image: url(logo\ diatas\ .png);
+    background-size: cover;
+    background-position: center;
+    width: 50px;
+    border-radius: 50%;
+}
+
+nav{
+    display: flex;
+}
+
+nav>a{
+border: 1px solid;
+padding: 8px;
+text-decoration: none;
+color: black;
+}
+
+.photo-banner  {
+    height: 400px;
+    background-image: url(logo\ bener.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.article {
+    height: 300px;
+}
+
+.message-container{
+    display: flex;
+}
+
+footer>p {
+    text-align: center;
+    font-family: cursive;
+    font-size: small;
+}
