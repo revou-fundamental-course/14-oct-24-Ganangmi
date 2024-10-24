@@ -17,6 +17,7 @@
 
 nav{
     display: flex;
+    background-color: #ccccff;
 }
 
 nav>a{
@@ -26,11 +27,44 @@ text-decoration: none;
 color: black;
 }
 
+/* Welcome layar awal */
+.welcome-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ccccff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+    color: black;
+}
+
+/*Home*/
 .photo-banner  {
     height: 400px;
-    background-image: url(logo\ bener.jpg);
     background-size: cover;
     background-position: center;
+    display: none;
+}
+
+.photo-banner:first-child {
+    display: block;
+}
+
+.photo-1 {
+    background-image: url(logo\ bener.jpg);
+}
+
+.photo-2 {
+    background-image: url(sanji4.jpg);
+}
+
+.photo-3 {
+    background-image: url(zorro1.jpg);
 }
 
 .article {
@@ -39,10 +73,87 @@ color: black;
 
 .message-container{
     display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    background-color: #ffcc99;
+}
+
+.messageForm{
+    width: 40%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Tombol radio dilurusin*/
+.messageForm label [for="gender"] {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.output-container {
+    width: 40%;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#result {
+    margin: 0ex;
 }
 
 footer>p {
     text-align: center;
     font-family: cursive;
     font-size: small;
+}
+
+/* CSS untuk layar besar */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+/* CSS untuk layar kecil (HP) */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column; 
+        align-items: center;    
+    }
+
+    .logo-icon {
+        margin-bottom: 10px;    
+        width: 70px;          
+        height: 70px;
+    }
 }
